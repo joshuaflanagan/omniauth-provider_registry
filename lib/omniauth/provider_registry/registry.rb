@@ -8,7 +8,7 @@ module OmniAuth
       end
 
       def find(name)
-        factory = factories_by_name[name]
+        factory = factories_by_name[name.to_sym]
         factory.call if factory
       end
 
