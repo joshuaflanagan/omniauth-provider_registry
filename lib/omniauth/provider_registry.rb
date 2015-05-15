@@ -1,3 +1,4 @@
+require 'omniauth'
 require "omniauth/provider_registry/version"
 require "omniauth/provider_registry/registry"
 require "omniauth/provider_registry/rails_middleware_source"
@@ -13,7 +14,7 @@ module OmniAuth
     end
 
     def self.source
-      RailsMiddlewareSource.new
+      RailsMiddlewareSource
     end
   end
 end
