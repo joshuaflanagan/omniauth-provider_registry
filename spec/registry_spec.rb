@@ -8,4 +8,20 @@ describe OmniAuth::ProviderRegistry::Registry do
       registry.find(:unknown_provider).must_be_nil
     end
   end
+
+  describe "when asked to find a provider it does know about" do
+    it "returns an instance of a configured strategy" do
+      provider_factories = [
+        -> { OpenStruct.new(name: :red) },
+        -> { OpenStruct.new(name: :orange) },
+        -> { OpenStruct.new(name: :yellow) },
+      ]
+
+      registry = OmniAuth::ProviderRegistry::Registry.new(provider_factories)
+      provider = registry.find(:orange)
+
+      provider.wont_be_nil
+      provider.name.to_s.must_equal "orange"
+    end
+  end
 end
