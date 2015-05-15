@@ -1,4 +1,4 @@
-# Omniauth::ProviderRegistry
+# OmniAuth::ProviderRegistry
 
 Provides access to your application's configured OmniAuth providers
 

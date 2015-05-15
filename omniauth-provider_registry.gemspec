@@ -5,7 +5,7 @@ require 'omniauth/provider_registry/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "omniauth-provider_registry"
-  spec.version       = Omniauth::ProviderRegistry::VERSION
+  spec.version       = OmniAuth::ProviderRegistry::VERSION
   spec.authors       = ["Joshua Flanagan"]
   spec.email         = ["joshuaflanagan@gmail.com"]
   spec.summary       = %q{Provides access to your configured OmniAuth providers}
