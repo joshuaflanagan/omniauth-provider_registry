@@ -22,7 +22,6 @@ describe OmniAuth::ProviderRegistry::RailsMiddlewareSource do
       end
   end
 
-  require 'byebug'
   it "returns factory methods for all OmniAuth middleware" do
     source = OmniAuth::ProviderRegistry::RailsMiddlewareSource.new(configured_middlewares)
     provider_factories = source.providers
